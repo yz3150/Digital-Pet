@@ -20,7 +20,7 @@
   </div>
   <div class="buttongroup">
     <button type="button" name="Feed Dorayaki" onclick={ feedDorayaki } disabled={}>Feed Dorayaki, { food } left</button>
-    <button type="button" name="Have Doraemon Clean" onclick={ cleanHouse } disabled={}>Clean House</button>
+    <button type="button" name="Have Doraemon Clean" onclick={ cleanHouse } disabled={}>Let Him Clean House</button>
 
   </div>
 
