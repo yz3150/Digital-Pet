@@ -1,6 +1,7 @@
 <pet>
   <h1>Doraemon</h1>
-  <div>
+  <p>Doraemon is your digital pet. He is your friend and also serves you. The goal is to make him like you.</p>
+<div>
     <img src="{ petImage }" ref="pet" style="">
   </div>
 
@@ -8,18 +9,18 @@
     <div class="bar likes">
       <div style="width:{ petLikes }%;">&nbsp;</div>
     </div>
-    <p>LIKES: { petLikes }</p>
+    <p>LIKES: { petLikes } out of 100</p>
   </div>
 
   <div>
     <div class="bar cleaness">
       <div style="width:{ houseCleaness }%;">&nbsp;</div>
     </div>
-    <p>CLEANESS:{ houseCleaness }</p>
+    <p>CLEANESS: { houseCleaness } out of 100</p>
   </div>
   <div class="buttongroup">
-    <button type="button" name="Feed Dorayaki" onclick={ feedDorayaki } disabled={}>Feed Dorayaki, { food } left</button>
-    <button type="button" name="Have Doraemon Clean" onclick={ cleanHouse } disabled={}>Let Him Clean House</button>
+    <button type="button" name="Feed Dorayaki" onclick={ feedDorayaki } disabled={}>Feed him Dorayaki <br/>(total { food } left)</button>
+    <button type="button" name="Have Doraemon Clean" onclick={ cleanHouse } disabled={}>Let him clean the house</button>
 
   </div>
 
