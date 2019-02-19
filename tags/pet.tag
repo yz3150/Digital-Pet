@@ -10,14 +10,14 @@
     <div class="bar likes">
       <div style="width:{ petLikes }%;">&nbsp;</div>
     </div>
-    <p>LIKES: { petLikes }</p>
+    <p>LIKES: { petLikes } out of 100</p>
   </div>
 
   <div>
     <div class="bar cleaness">
       <div style="width:{ houseCleaness }%;">&nbsp;</div>
     </div>
-    <p>CLEANESS:{ houseCleaness }</p>
+    <p>CLEANESS: { houseCleaness } out of 100</p>
   </div>
   <div class="buttongroup">
     <button type="button" name="Feed Dorayaki" onclick={ feedDorayaki } disabled={}>Feed him Dorayaki <br/>(total { food } left)</button>
