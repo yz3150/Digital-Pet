@@ -19,8 +19,8 @@
     <p>CLEANESS: { houseCleaness } out of 100</p>
   </div>
   <div class="buttongroup">
-    <button type="button" name="Feed Dorayaki" onclick={ feedDorayaki } disabled={}>Feed him Dorayaki ({ food } left)</button>
-    <button type="button" name="Have Doraemon Clean" onclick={ cleanHouse } disabled={}>Let him clean the house</button>
+    <button type="button" name="Feed Dorayaki" onclick={ feedDorayaki } disabled={ food <= 0}>Feed him Dorayaki ({ food } left)</button>
+    <button type="button" name="Have Doraemon Clean" onclick={ cleanHouse }>Let him clean the house</button>
 
   </div>
 
