@@ -1,9 +1,8 @@
 <pet>
   <h1>Doraemon</h1>
-<div>
+  <div>
     <img src="{ petImage }" ref="pet" style="">
-</div>
-
+  </div>
 
   <div>
     <div class="bar likes">
@@ -24,7 +23,6 @@
 
   </div>
 
-
   <script>
     var tags = this;
 
@@ -41,17 +39,17 @@
     feedDorayaki(event) {
       this.petLikes = this.petLikes + 20;
       this.houseCleaness = this.houseCleaness - 10;
-      this.food =  this.food - 1;
+      this.food = this.food - 1;
       this.checkHateBar();
       this.checkLikeBar();
       this.updateLikeImage();
 
-    if (this.houseCleaness < 30) {
-      this.petImage ="../assets/mice.jpeg";
-      this.petLikes = this.petLikes -40;
-      this.food =  this.food -10;
-      this.cleaness = this. cleaness -10;
-    }
+      if (this.houseCleaness < 30) {
+        this.petImage = "../assets/mice.jpeg";
+        this.petLikes = this.petLikes - 40;
+        this.food = this.food - 10;
+        this.cleaness = this.cleaness - 10;
+      }
     }
 
     cleanHouse(event) {
@@ -63,30 +61,32 @@
     }
 
     updateLikeImage(event) {
-      if (this.petLikes >= (TOTALLIKES*0.8)) {
+      if (this.petLikes >= (TOTALLIKES * 0.8)) {
         this.petImage = "../assets/like-04.gif";
-    } else if (this.petLikes >= (TOTALLIKES*0.6)) {
+      } else if (this.petLikes >= (TOTALLIKES * 0.6)) {
         this.petImage = "../assets/like-03.gif";
-    } else if (this.petLikes >= (TOTALLIKES*0.4)) {
-        this.petImage ="../assets/like-02.gif";
-    } else if (this.petLikes >= (TOTALLIKES*0.2)) {
-      this.petImage = "../assets/like-01.gif";
-    } else {
-      this.petImage = "../assets/like-00.gif";
-    }}
+      } else if (this.petLikes >= (TOTALLIKES * 0.4)) {
+        this.petImage = "../assets/like-02.gif";
+      } else if (this.petLikes >= (TOTALLIKES * 0.2)) {
+        this.petImage = "../assets/like-01.gif";
+      } else {
+        this.petImage = "../assets/like-00.gif";
+      }
+    }
 
     updateHateImage(event) {
-      if(this.houseCleaness >= (TOTALLCLEANESS*0.8)) {
+      if (this.houseCleaness >= (TOTALLCLEANESS * 0.8)) {
         this.petImage = "../assets/hate-04.gif";
-    } else if (this.houseCleaness >= (TOTALLCLEANESS*0.6)) {
+      } else if (this.houseCleaness >= (TOTALLCLEANESS * 0.6)) {
         this.petImage = "../assets/hate-03.gif";
-    } else if (this.houseCleaness >= (TOTALLCLEANESS*0.4)) {
+      } else if (this.houseCleaness >= (TOTALLCLEANESS * 0.4)) {
         this.petImage = "../assets/hate-02.gif";
-    } else if (this.houseCleaness >= (TOTALLCLEANESS*0.2)) {
-      this.petImage = "../assets/hate-01.gif";
-    } else {
-      this.petImage = "../assets/like-00.gif";
-    }}
+      } else if (this.houseCleaness >= (TOTALLCLEANESS * 0.2)) {
+        this.petImage = "../assets/hate-01.gif";
+      } else {
+        this.petImage = "../assets/like-00.gif";
+      }
+    }
 
     checkLikeBar(event) {
       if (this.petLikes < 0) {
@@ -107,54 +107,50 @@
         this.houseCleaness = this.houseCleaness;
       }
     }
-
   </script>
 
   <style>
-  :scope {
-    font-size: 1.5em;
-    font-family: sans-serif;
-    text-align: center;
-  }
+    :scope {
+      font-size: 1.5em;
+      font-family: sans-serif;
+      text-align: center;
+    }
 
-  img {
-    height: 300px;
-  }
+    img {
+      height: 300px;
+    }
 
-  .bar {
-    width: 100%;
-    border: 1px solid grey;
-    text-align: left;
-  }
-  .bar > div {
-    transition: width 1s;
-  }
+    .bar {
+      width: 100%;
+      border: 1px solid grey;
+      text-align: left;
+    }
+    .bar > div {
+      transition: width 1s;
+    }
 
-  .bar.likes > div {
-  background-color: dodgerblue;
-}
+    .bar.likes > div {
+      background-color: dodgerblue;
+    }
 
+    .bar.cleaness > div {
+      background-color: yellow;
+    }
 
-  .bar.cleaness > div {
-  background-color: yellow;
-}
+    button {
+      font-size: 1em;
+      padding: 0.4em;
+      border-radius: 0.25em;
+      background-color: coral;
+      border: 1px solid navy;
+      cursor: pointer;
+      width: 300px;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
 
-button {
-  font-size: 1em;
-  padding: 0.4em;
-  border-radius: 0.25em;
-  background-color: coral;
-  border: 1px solid navy;
-  cursor: pointer;
-  width: 300px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-.buttongroup {
-  text-align: center;
-}
-
-
+    .buttongroup {
+      text-align: center;
+    }
   </style>
 </pet>
